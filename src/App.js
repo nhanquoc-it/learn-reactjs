@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js (Function Component)
+// Cú pháp emmet : rfce
+
+// Import thư viện
+import React from "react";
+import "./App.css";
+
+// Import Components
+
+// Import Images
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// Paste the code here to use
+
+	// Create an data
+
+	// Return Component - Render JSX
+	return (
+		<div className="App">
+			<header className="App-header">
+				<h2>Test Component</h2>
+			</header>
+		</div>
+	);
 }
 
 export default App;
