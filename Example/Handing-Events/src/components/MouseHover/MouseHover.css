@@ -1,0 +1,11 @@
+.mouse-hover {
+	padding: 20px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	text-align: center;
+	cursor: pointer;
+}
+.mouse-hover:hover {
+	background-color: brown;
+	color: #fff;
+}

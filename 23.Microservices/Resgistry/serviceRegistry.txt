@@ -1,0 +1,10 @@
+/* Khởi tạo Service Registry bằng Eureka Server */ 
+
+@SpringBootApplication
+@EnableEurekaServer
+
+public class ServiceRegistryApplication {
+    public static void main(String [] args) {
+        SpringBootApplication.run(ServiceRegistryApplication.class, args);
+    }
+}

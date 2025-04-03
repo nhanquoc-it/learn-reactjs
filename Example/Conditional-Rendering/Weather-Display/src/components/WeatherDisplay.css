@@ -1,0 +1,12 @@
+.weather-display {
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.weather-display.sunny {
+	color: #ff9800;
+}
+
+.weather-display.cloudy {
+	color: #607d8b;
+}

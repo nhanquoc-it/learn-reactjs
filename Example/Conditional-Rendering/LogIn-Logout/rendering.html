@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>React TestCase</title>
+		<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- Script JSX -->
+		<script type="text/babel">
+			class LoginControl extends React.Component {
+				constructor(props) {
+					super(props);
+					this.state = { isLoggedIn: false };
+				}
+				// Function : Button
+				handleLoginClick = () => {
+					this.setState({ isLoggedIn: true });
+				};
+				handleLogoutClick = () => {
+					this.setState({ isLoggedIn: false });
+				};
+
+				// Render JSX
+				render() {
+					const isLoggedIn = this.state.isLoggedIn;
+					let button; /* Khai báo biến button sử dụng cho if */
+
+					if (isLoggedIn) {
+						button = <LogoutButton onCLick={this.handleLogoutClick} />;
+					} else {
+						button = <LoginButton onClick={this.handleLoginClick} />;
+					}
+					return (
+						<div>
+							<Greeting isLoggedIn={isLoggedIn} />
+							{button}
+						</div>
+					);
+				}
+			}
+			// Components : Greeting
+			const UserGreeting = (props) => {
+				return <h2>Welcome back!</h2>;
+			};
+
+			const GuestGreeting = (props) => {
+				return <h2>Please sign in.</h2>;
+			};
+
+			// Function : Greeting
+			const Greeting = (props) => {
+				const isLoggedIn = props.isLoggedIn;
+				if (isLoggedIn) {
+					return <UserGreeting />;
+				}
+				return <GuestGreeting />;
+			};
+
+			// Components : Button
+			const LoginButton = (props) => {
+				return <button onClick={props.onClick}>Login</button>;
+			};
+
+			const LogoutButton = (props) => {
+				return <button onClick={props.onClick}>Logout</button>;
+			};
+
+			// Render DOM
+			ReactDOM.render(<LoginControl />, document.getElementById("root"));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+.book-list {
+	list-style-type: none;
+	padding: 40px;
+	border: 2px solid gainsboro;
+}
+.book-list li {
+	margin-bottom: 10px;
+	font-size: 18px;
+}

@@ -1,0 +1,10 @@
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+button.active {
+	background-color: #4acf50;
+	color: white;
+    /* Thay đổi màu sắc hoặc kiểu hiển thị tùy ý khi nút được nhấn */
+}

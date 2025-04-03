@@ -1,0 +1,27 @@
+.toggle {
+	text-align: center;
+	margin-top: 20px;
+}
+.toggle-button {
+	padding: 12px 20px;
+	font-size: 16px;
+	margin-top: 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	background-color: #4cef50;
+	color: #fff;
+	outline: none;
+}
+.light-image {
+	width: 100px;
+	margin-top: 20px;
+	transition: opacity 0.3s ease;
+	color: brown;
+}
+.on .light-image {
+	opacity: 1;
+}
+.off .light-image {
+	opacity: 0.3;
+}

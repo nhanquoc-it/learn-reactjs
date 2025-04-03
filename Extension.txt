@@ -1,0 +1,14 @@
+# Extension in VSCode :
+1. ReactJS code snippets - Code reactjs nhanh với snippets
+2. Javascript (ES6) code snippets - Code js nhanh với snippets
+3. SCSS Formatter - Format styles: CSS, SCSS
+4. Bracket Pair Colorizer 2 - Tô màu khác nhau cho dấu ngoặc lồng nhau
+
+# Guide document file "README.md" in VSCode : 
+5. Markdown All in One - Tiện ích hỗ trợ viết tài liệu cho file "README.md".
+6. Markdown Preview Enhanced - Tiện ích xem trước file "README.md".
+----> Link hướng dẫn : https://www.youtube.com/watch?v=zunwTq3QC-Q
+
+# Debug React on Google Chrome :
+1. React Developer Tool - Xem được "state" và "props" của các component React.
+2. Redux DevTools - Debug khi áp dụng Redux vào dự án.

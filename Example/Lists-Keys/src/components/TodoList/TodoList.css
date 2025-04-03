@@ -1,0 +1,39 @@
+.todo-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.todo-list li {
+	margin-bottom: 15px;
+	background-color: #f8f9fa;
+	color: #333;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+.todo-list li:hover {
+	background-color: #e9ecef;
+}
+/* Dấu check */
+.todo-list li::before {
+	content: "\2713";
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 18px;
+	color: #28a745;
+}
+/* Gạch ngang khi task hoàn thành */
+.todo-list li.completed {
+	text-decoration: line-through;
+	color: #6c757d;
+}
+/* Task đã hoàn thành */
+.todo-list li.completed::before {
+	color: #6c757d;
+}
+/* Task chưa hoàn thành */
+.todo-list li.incomplete::before {
+	color: #dc3545;
+}

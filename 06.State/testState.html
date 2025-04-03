@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hello React</title>
+		<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- Script -->
+		<script type="text/babel">
+			class Member extends React.Component {
+				// Khởi tạo State
+				constructor(props) {
+					super(props);
+					this.state = {
+						users: [
+							{
+								name: "Bùi Văn Tèo",
+								age: 25,
+							},
+							{
+								name: "Trần Văn An",
+								age: 29,
+							},
+							{
+								name: "Nguyễn Thị Bưởi",
+								age: 22,
+							},
+						],
+						job: "IT Communication",
+					};
+				}
+				// Cập nhật State
+				changeName = () => {
+					this.setState({
+						users: [
+							{
+								name: "Bùi Văn Tèo",
+								age: 27,
+							},
+							{
+								name: "Trần Văn An",
+								age: 29,
+							},
+							{
+								name: "Nguyễn Thị Bưởi",
+								age: 22,
+							},
+						],
+						job: "Bridge System Engineer",
+					});
+				};
+				// Render JSX
+				render() {
+					return (
+						<div>
+							<h2>Tên: {this.state.users[0].name}</h2>
+							<p>Tuổi: {this.state.users[0].age}</p>
+							<p>Nghề nghiệp: {this.state.job}</p>
+							<button type="button" onClick={this.changeName}>
+								Change Data
+							</button>
+						</div>
+					);
+				}
+			}
+
+			// Render DOM
+			ReactDOM.render(<Member />, document.getElementById("root"));
+		</script>
+	</body>
+</html>

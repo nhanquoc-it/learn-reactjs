@@ -1,0 +1,10 @@
+/* Cấu hình "Service Provider" để đăng ký với "Service Registry" */
+
+@SpringBootApplication
+@EnableDiscoveryClient
+
+public class ServiceProviderApplication {
+    public static void main(String [] args) {
+        SpringBootApplication.run(ServiceProviderApplication.class, args);
+    }
+}

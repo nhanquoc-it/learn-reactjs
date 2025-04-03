@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ReactJS - JSX</title>
+		<!-- Load React -->
+		<script
+			src="https://unpkg.com/react@17/umd/react.development.js"
+			crossorigin
+		></script>
+		<!-- Load React-DOM -->
+		<script
+			src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+			crossorigin
+		></script>
+		<!-- Load Babel -->
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- ==== Code JSX ====-->
+		<script type="text/babel">
+			// JSX with Variable
+			const name = "React JS";
+			const message = <h1>Welcome to {name}</h1>;
+
+			// JSX with Function, Object
+			const user = {
+				firstName: "John",
+				lastName: "Don",
+			};
+			function formatName(user) {
+				return user.firstName + " " + user.lastName;
+			}
+			const element = <h1>Hello, {formatName(user)}!</h1>;
+
+			// JSX with Expression
+			function jsxExpression(name) {
+				if (name) {
+					return <p>Hello, {name} !</p>;
+				} else {
+					return <p>Hello guy !</p>;
+				}
+			}
+
+			// JSX with Attributes
+			const jsxAttr = <div tabIndex="0"></div>;
+			const jsxImage = <img src="{user.avatarUrl}" />;
+
+			// JSX with Child Element
+			// Đúng cú pháp : Phải bọc nó bằng 1 tags
+			const jsxChildElm = (
+				<div>
+					<h1>Hello</h1>
+					<p>Welcome to learn ReactJS</p>
+				</div>
+			);
+			// Sai cú pháp : Các phần tử không được bọc
+			/*
+			Uncaught SyntaxError: Inline Babel script: Adjacent JSX elements must be wrapped in an enclosing tag
+			*/
+			// const child = (
+			// 	<h1>Hello</h1>
+			// 	<p>Welcome to learn ReactJS</p>
+			// );
+
+			// JSX with Object
+			const jsxObject = {
+				type: "p",
+				props: {
+					className: "welcome",
+					children: "Welcome to learning ReactJS",
+				},
+			};
+			// Same as
+			// const text = <p className="welcome">Welcome to learning ReactJS</p>
+
+			// render UI
+			ReactDOM.render(element, document.getElementById("root"));
+		</script>
+	</body>
+</html>

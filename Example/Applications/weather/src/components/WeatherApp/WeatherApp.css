@@ -1,0 +1,16 @@
+.weather-app {
+	text-align: center;
+	margin-top: 20px;
+}
+label {
+	margin-right: 10px;
+}
+input {
+	margin-bottom: 15px;
+	padding: 5px;
+}
+p {
+	font-size: 18px;
+	font-weight: bold;
+	color: red;
+}

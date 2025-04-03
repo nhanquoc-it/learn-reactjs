@@ -1,0 +1,29 @@
+.context-element {
+	position: relative;
+	padding: 20px;
+	border: 1px solid #ccc;
+	user-select: none;
+	color: crimson;
+	background-color: darkkhaki;
+}
+
+.context-menu {
+	display: none;
+	position: absolute;
+	background-color: brown;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	z-index: 1000;
+	color: aliceblue;
+}
+
+.context-menu div {
+	cursor: pointer;
+	padding: 8px;
+	transition: background-color 0.3s;
+}
+
+.context-menu div:hover {
+	background-color: darkcyan;
+}

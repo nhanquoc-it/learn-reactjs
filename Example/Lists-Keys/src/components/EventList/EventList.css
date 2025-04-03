@@ -1,0 +1,12 @@
+.event-list {
+	list-style: none;
+	padding: 0;
+}
+
+.event-list li {
+	margin-bottom: 20px;
+}
+
+.event-list li h3 {
+	margin-bottom: 10px;
+}

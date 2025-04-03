@@ -1,0 +1,32 @@
+/* Cấu hình "Service Consumer" để tìm kiếm và sử dụng dịch vụ từ "Service Registry" */
+
+@SpringBootApplication
+@EnableDiscoveryClient
+
+public class ServiceConsumerApplication {
+    public static void main(String [] args) {
+        SpringBootApplication.run(ServiceConsumerApplication.class, args);
+    }
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    @RestController
+    public class ConsumerController {
+        @Autowired
+        private RestTemplate restTemplate;
+
+        @Autowired
+        private DiscoveryClient discoveryClient;
+
+        @GetMapping("/greeting")
+        public String getGreeting() {
+            List<ServiceInstance> instances = discoveryClient.getInstances("service-provider");
+            URI uri = instances.get(0).getUri();
+            return restTemplate.getForObject(uri + "/hello", String.class);
+        }
+    }
+}

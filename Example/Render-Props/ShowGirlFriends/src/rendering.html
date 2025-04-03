@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>React TestCase</title>
+		<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- Script JSX -->
+		<script type="text/babel">
+			// Component : ShowGirlFriends.js
+			const ShowGirlFriends = (props) => {
+				return (
+					<ul>
+						{props.listGirlFriends.map((person, index) => {
+							props.children(person);
+							return <li key={person.id}>{person.name}</li>;
+						})}
+					</ul>
+				);
+			};
+
+			// Function Components : App.js
+			function App(props) {
+				// Object chứa thông tin của người iu
+				const myGirlFriends = [
+					{
+						id: 1,
+						name: "Khanh Huyen",
+						email: "khanhhuyen123@gmail.com",
+					},
+					{
+						id: 2,
+						name: "Nguyen Hang",
+						email: "nguyenhang2903@gmail.com",
+					},
+					{
+						id: 3,
+						name: "Pham Uyen",
+						email: "phamuyenz@gmail.com",
+					},
+				];
+
+				return (
+					<ShowGirlFriends listGirlFriends={myGirlFriends}>
+						{(data) => {
+							// Nhận data từ component "ShowGirlFriends" khi nó trả về
+							// bằng đoạn props.children(person)
+							console.log(data);
+						}}
+					</ShowGirlFriends>
+				);
+			}
+
+			// Render DOM
+			ReactDOM.render(<App />, document.getElementById("root"));
+		</script>
+	</body>
+</html>

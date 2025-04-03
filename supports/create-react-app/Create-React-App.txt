@@ -1,0 +1,48 @@
+############################ Khởi tạo ReactJS App ############################
+
+	1. Di chuyển vào thư mục dự án và mở "terminal" gõ dòng lệnh :
+
+		~> npx create-react-app my-app		# my-app : tên thư mục dự án (tự đặt)
+	
+	2. Đợi quá trình cài đặt hoàn tất, khi cài đặt thành công :
+	....................................
+	We suggest that you begin by typing:
+		cd my-app
+		npm start
+	Happy Hacking!
+	....................................
+
+	3. Cấu trúc của create-react-app :
+		+ src : sẽ chứa những đoạn mã mà chúng ta viết sau này.
+		+ public : sẽ chứa các file ảnh, css, js ... hay bất cứ thứ gì mà bạn muốn.
+		+ node_modules : các module cài tự động khi tạo react app, bạn không cần quan tâm đến nó.
+		+ "package.json" và "package-lock.json" : chứa thông tin của các module cần thiết.
+
+	4. Khởi chạy dự án :
+	- Tiến hành truy cập vừa được khởi tạo bằng cách gõ các lệnh sau :
+		
+		~> cd my-app
+		~> npm start
+
+############################ Xây dựng ứng dụng ReactJS đầu tiên ############################
+
+1. Tìm đến thư mục "src" > file "App.js" > tiến hành chỉnh sửa như sau :
+
+		import React from 'react';
+		function App() {
+		return (
+			<div>
+				<h1>Hello React.js</h1>
+			</div>
+		);
+		}
+		
+		export default App;
+
+2. Mở file "index.js" > Chú ý đến đoạn code "document.getElementById('root')"
+	- Đây là vị trí mà tất cả các "component" sẽ render ra.
+	- Có thể tìm id "root" ở trong file "public/index.html".
+
+3. Tiến hành khởi chạy dự án bằng cách mở Terminal và gõ lệnh :	npm start
+
+	- Truy cập vào đường dẫn : http://localhost:3000 => sẽ thấy kết quả

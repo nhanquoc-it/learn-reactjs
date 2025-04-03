@@ -1,0 +1,13 @@
+.subscription-plan {
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+
+.subscription-plan h3 {
+	margin-top: 0;
+}
+
+.subscription-plan div {
+	margin-bottom: 20px;
+}

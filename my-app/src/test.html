@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>React TestCase</title>
+		<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- Script JSX -->
+		<script type="text/babel">
+			/***
+			 * - Copy & Paste file có đuôi ".js" component muốn thực thi vào đây
+			 * - Chạy 1 trong 2 hình thức : Function || Class
+			 */
+
+			// Class Components
+			class App extends React.Component {
+				// Nếu sử dụng Class Component thì dán code vào đây
+			}
+
+			// Function Components
+			// const App = () => {
+			// 	// Nếu sử dụng Function Component thì dán code vào đây
+			// };
+
+			// Render DOM
+			ReactDOM.render(<App />, document.getElementById("root"));
+		</script>
+	</body>
+</html>

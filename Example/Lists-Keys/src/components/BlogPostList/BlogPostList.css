@@ -1,0 +1,15 @@
+.blog-post {
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+
+.blog-post h3 {
+	margin-top: 0;
+}
+
+.blog-post p {
+	margin-bottom: 0;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>React-DOM</title>
+		<!-- Load React -->
+		<script
+			src="https://unpkg.com/react@18/umd/react.development.js"
+			crossorigin
+		></script>
+		<!-- Load React-DOM -->
+		<script
+			src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+			crossorigin
+		></script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script>
+			// DOM element 7
+			// const divDOM = document.createElement("div");
+			// const h2DOM = document.createElement("h2");
+			// h2DOM.title = "Học React tại React org";
+			// h2DOM.innerText = "Học ReactJS";
+			// const pDOM = document.createElement("p");
+			// pDOM.innerText = "Học ReactJS từ cơ bản đến nâng cao";
+
+			// divDOM.appendChild(h2DOM);
+			// divDOM.appendChild(pDOM);
+			// document.body.appendChild(divDOM);
+
+			// React element
+			const postItem = React.createElement(
+				"div",
+				{
+					className: "post-item",
+				},
+				React.createElement(
+					"h2",
+					{
+						title: "Học React tại React org",
+					},
+					"Học ReactJS"
+				),
+				React.createElement("p", {}, "Học ReactJS từ cơ bản đến nâng cao")
+			);
+			console.log(postItem);
+
+			// Get root element
+			const container = document.getElementById("root");
+
+			// React-DOM => render UI
+
+			// v17 : ReactDOM.render(reactElement, container)
+			// ReactDOM.render(postItem, container);
+
+			// v18 : ReactDOM.createRoot(container)
+			const root = ReactDOM.createRoot(container);
+			root.render(postItem);
+		</script>
+	</body>
+</html>

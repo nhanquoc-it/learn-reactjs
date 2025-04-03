@@ -1,0 +1,18 @@
+.copy-to-clipboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+textarea {
+	width: 300px;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+button {
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+}

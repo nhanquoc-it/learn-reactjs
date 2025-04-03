@@ -1,0 +1,17 @@
+.simple-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.simple-list li {
+	margin-bottom: 10px;
+	background-color: #f8f9fa;
+	padding: 12px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+.simple-list li:hover {
+	background-color: aqua;
+}

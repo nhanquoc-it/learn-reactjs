@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>React TestCase</title>
+		<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- Script JSX -->
+		<script type="text/babel">
+			// Component : Counter.js
+			class Counter extends React.Component {
+				constructor(props) {
+					super(props);
+					this.state = {
+						count: 0,
+					};
+
+					// Bind this
+					this.increment = this.increment.bind(this);
+					this.decrement = this.decrement.bind(this);
+				}
+				// Hàm này sẽ TĂNG giá trị của số
+				increment() {
+					this.setState({
+						count: this.state.count + 1,
+					});
+				}
+
+				// Hàm này sẽ GIẢM giá trị của số
+				decrement() {
+					this.setState({
+						count: this.state.count - 1,
+					});
+				}
+
+				// Render JSX
+				render() {
+					return (
+						<div>
+							{
+								// Trả về giá trị cho props render
+								this.props.render({
+									count: this.state.count,
+									increment: this.increment,
+									decrement: this.decrement,
+								})
+							}
+						</div>
+					);
+				}
+			}
+
+			// Function Components : App.js
+			function App(props) {
+				return (
+					<Counter
+						render={(data) => {
+							// Nhận giá trị trả về từ Counter
+							// qua props render.
+							const { count, increment, decrement } = data;
+							return (
+								<>
+									<p>Giá trị {count}</p>
+									<button onClick={increment}>Tăng</button>
+									<button onClick={decrement}>Giảm</button>
+								</>
+							);
+						}}
+					/>
+				);
+			}
+
+			// Render DOM
+			ReactDOM.render(<App />, document.getElementById("root"));
+		</script>
+	</body>
+</html>

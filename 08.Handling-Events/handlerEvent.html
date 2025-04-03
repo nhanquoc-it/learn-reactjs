@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>React TestCase</title>
+		<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<body>
+		<h1>
+			Xây dựng ví dụ về bắt sự kiện trong React và một vài cách gọi hàm trong
+			React
+		</h1>
+		<div id="root"></div>
+
+		<!-- Script JSX -->
+		<script type="text/babel">
+			class App extends React.Component {
+				constructor(props) {
+					super(props);
+					// Khởi tạo state
+					this.state = {
+						textareaChange: "",
+						buttonClick: "",
+						mouseOver: "",
+					};
+					// bind this cho function mouseOver để  tránh gặp lỗi không tồn tại biến this.
+					this.mouseOver = this.mouseOver.bind(this);
+				}
+				changeText(e) {
+					this.setState({
+						textareaChange: e.target.value,
+					});
+				}
+
+				mouseOver() {
+					this.setState({
+						mouseOver: this.state.mouseOver + "mouseOver....",
+					});
+				}
+
+				render() {
+					return (
+						<div style={{ marginTop: "5%" }}>
+							<button
+								onClick={() => {
+									this.setState({
+										buttonClick: this.state.buttonClick + "onClick...",
+									});
+								}}
+							>
+								Click me...
+							</button>
+							<p>
+								button: <code>{this.state.buttonClick}</code>
+							</p>
+							<hr />
+							<textarea
+								onChange={(e) => this.changeText(e)}
+								placeholder="Nhập cái gì đó..."
+							/>
+							<p>
+								textarea: <code>{this.state.textareaChange}</code>
+							</p>
+							<hr />
+							<h6 onMouseOver={this.mouseOver}>Di chuột vào đây nè !</h6>
+							<p>
+								mouseOver: <code>{this.state.mouseOver}</code>
+							</p>
+						</div>
+					);
+				}
+			}
+			// Render DOM
+			ReactDOM.render(<App />, document.getElementById("root"));
+		</script>
+	</body>
+</html>

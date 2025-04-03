@@ -1,0 +1,14 @@
+.App {
+	text-align: center;
+	margin-top: 50px;
+}
+
+button {
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: #ddd;
+}

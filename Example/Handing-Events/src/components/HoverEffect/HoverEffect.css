@@ -1,0 +1,10 @@
+.hover-element {
+	padding: 20px;
+	border: 1px solid #ccc;
+	transition: background-color 0.3s ease;
+}
+
+.hover-element.hovered {
+	background-color: #f15825;
+	/* Thay đổi màu sắc hoặc kiểu hiển thị tùy ý khi hover */
+}

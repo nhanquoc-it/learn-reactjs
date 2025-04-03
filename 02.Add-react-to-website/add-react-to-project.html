@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>React JS</title>
+		<!-- Load React -->
+		<script
+			src="https://unpkg.com/react@17/umd/react.development.js"
+			crossorigin
+		></script>
+		<!-- Load React-DOM -->
+		<script
+			src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+			crossorigin
+		></script>
+	</head>
+	<body>
+		<!--
+			Bước 1: Thêm DOM Container vào HTML
+				Thẻ <div> rỗng có id là "root"
+
+			Bước 2: Thêm các thẻ Script (Script Tags)
+				Thêm ba thẻ <script> vào trang HTML ngay trước thẻ đóng <body> (hoặc bất kỳ đâu)
+
+			Bước 3: Tạo một React Component || DOM Element
+		-->
+		<h1>Add React To Website</h1>
+		<div id="root"></div>
+
+		<!-- Load Component -->
+		<script>
+			// Thêm một Component vào root
+			const h1 = document.createElement("h1");
+			h1.innerText = "Đã thêm React thành công vào project";
+			const root = document.getElementById("root");
+			root.appendChild(h1);
+			// Kiểm tra React đã được thêm vào project hay chưa ?
+			console.log("React Version: ", React.version);
+		</script>
+	</body>
+</html>

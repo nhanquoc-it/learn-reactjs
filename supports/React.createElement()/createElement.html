@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Method React.createElement()</title>
+		<!-- Add React -->
+		<script
+			src="https://unpkg.com/react@17/umd/react.development.js"
+			crossorigin
+		></script>
+	</head>
+	<body>
+		<script>
+			// DOM element 5
+			const h1DOM = document.createElement("h1");
+			h1DOM.title = "Hello";
+			h1DOM.className = "heading";
+			h1DOM.innerText = "Hello guys!";
+			document.body.appendChild(h1DOM);
+
+			// React element -> React-DOM
+			/* 
+            - React.createElement(type, props, children, n)
+			- children là 1 props 
+            */
+			const h1React = React.createElement(
+				"h1",
+				{
+					title: "Hello",
+					className: "heading",
+				},
+				"Hello guys!"
+			);
+
+			// In thông báo DOM & React => cả 2 đều trả về Object
+			console.dir(h1DOM);
+			console.log(h1React); // Quan tâm "type" và "props"
+
+			// DOM element 6
+			const ulDOM = document.createElement("ul");
+			const liDOM1 = document.createElement("li");
+			liDOM1.innerText = "Javascript";
+			const liDOM2 = document.createElement("li");
+			liDOM2.innerText = "ReactJS";
+			ulDOM.appendChild(liDOM1);
+			ulDOM.appendChild(liDOM2);
+			document.body.appendChild(ulDOM);
+
+			// React element : children 2 element trở lên thể hiện dưới dạng Array
+			const ulReact = React.createElement(
+				"ul",
+				null,
+				React.createElement("li", null, "Javascript"),
+				React.createElement("li", null, "ReactJS")
+			);
+			console.log(ulReact); // children:Array(2)
+		</script>
+	</body>
+</html>

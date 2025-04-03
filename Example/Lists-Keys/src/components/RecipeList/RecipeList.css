@@ -1,0 +1,21 @@
+.recipe-list {
+	list-style: none;
+	padding: 0;
+}
+
+.recipe-list li {
+	margin-bottom: 20px;
+}
+
+.recipe-list li h3 {
+	margin-bottom: 10px;
+}
+
+.recipe-list li ul {
+	list-style: none;
+	padding: 0;
+}
+
+.recipe-list li ul li {
+	margin-left: 20px;
+}

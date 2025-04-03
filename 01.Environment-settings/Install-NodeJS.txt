@@ -1,0 +1,18 @@
+# Hướng dẫn cài đặt NodeJS trên Window :
+
+- Bước 1: Download NodeJS từ trang chủ Nodejs.org
+	+ Truy cập đường dẫn : https://nodejs.org/en/download/package-manager
+	+ Prebulit Installer > Choose version Node.js want download > Download Node.js
+
+- Bước 2: Cài đặt phần mềm NodeJS
+	+ Mở file vừa download và thực hiện cài đặt
+	+ Next > Chọn "I accept the terms in the License Agreement" > Next
+	+ Chọn đường dẫn lưu > Next
+	+ Để nguyên "NodeJS" > Next
+	+ Click "Install" để cài đặt
+	+ Chạy xong > Chọn "Finish" để kết thúc
+
+- Bước 3: Kiểm tra trạng thái cài đặt
+	+ Menu Start > search "cmd" 
+	+ Gõ lệnh : node -v
+	+ Gõ lệnh : npm -v

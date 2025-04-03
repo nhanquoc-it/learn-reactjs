@@ -1,0 +1,9 @@
+.online-offline-status {
+	margin-bottom: 20px;
+}
+.online {
+	color: green;
+}
+.offline {
+	color: red;
+}

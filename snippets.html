@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ES7 React snippets</title>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+			integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+			crossorigin="anonymous"
+		/>
+		<!-- Highlight Code -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css"
+		/>
+	</head>
+	<body>
+		<h1>ES7 React/Redux/GraphQL/React-Native snippets</h1>
+		<!-- ==== Basic Method ====-->
+		<section class="table-container">
+			<h3>Basic Methods</h3>
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>imp→</td>
+						<td>import moduleName from 'module'</td>
+						<td>imn→</td>
+						<td>import 'module'</td>
+					</tr>
+
+					<tr>
+						<td>imd→</td>
+						<td>import { destructuredModule } from 'module'</td>
+						<td>ime→</td>
+						<td>import * as alias from 'module'</td>
+					</tr>
+
+					<tr>
+						<td>ima→</td>
+						<td>import { originalName as aliasName} from 'module'</td>
+						<td>exp→</td>
+						<td>export default moduleName</td>
+					</tr>
+
+					<tr>
+						<td>exd→</td>
+						<td>export { destructuredModule } from 'module'</td>
+						<td>exa→</td>
+						<td>export { originalName as aliasName} from 'module'</td>
+					</tr>
+
+					<tr>
+						<td>enf→</td>
+						<td>export const functionName = (params) => { }</td>
+						<td>edf→</td>
+						<td>export default (params) => { }</td>
+					</tr>
+
+					<tr>
+						<td>met→</td>
+						<td>methodName = (params) => { }</td>
+						<td>fre→</td>
+						<td>arrayName.forEach(element => { })</td>
+					</tr>
+
+					<tr>
+						<td>fof→</td>
+						<td>for(let itemName of objectName { })</td>
+						<td>fin→</td>
+						<td>for(let itemName in objectName { })</td>
+					</tr>
+
+					<tr>
+						<td>anfn→</td>
+						<td>(params) => { }</td>
+						<td>nfn→</td>
+						<td>const functionName = (params) => { }</td>
+					</tr>
+
+					<tr>
+						<td>dob→</td>
+						<td>const {propName} = objectToDescruct</td>
+						<td>cmmb→</td>
+						<td>comment block</td>
+					</tr>
+
+					<tr>
+						<td>dar→</td>
+						<td>const [propName] = arrayToDescruct</td>
+						<td>sti→</td>
+						<td>setInterval(() => { }, intervalTime)</td>
+					</tr>
+
+					<tr>
+						<td>sto→</td>
+						<td>setTimeout(() => { }, delayTime)</td>
+						<td>prom→</td>
+						<td>return new Promise((resolve, reject) => { })</td>
+					</tr>
+
+					<tr>
+						<td>cp→</td>
+						<td>const { } = this.props</td>
+						<td>cs→</td>
+						<td>const { } = this.state</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!--==== React ====-->
+		<section class="table-container">
+			<h3>React</h3>
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>imr→</td>
+						<td>import React from 'react'</td>
+						<td>imrd→</td>
+						<td>import ReactDOM from 'react-dom'</td>
+					</tr>
+
+					<tr>
+						<td>imrc→</td>
+						<td>import React, { Component } from 'react'</td>
+						<td>imrcp→</td>
+						<td>
+							import React, { Component } from 'react' & import PropTypes from
+							'prop-types'
+						</td>
+					</tr>
+
+					<tr>
+						<td>imrpc→</td>
+						<td>import React, { PureComponent } from 'react'</td>
+						<td>imrpcp→</td>
+						<td>
+							import React, { PureComponent } from 'react' & import PropTypes
+							from 'prop-types'
+						</td>
+					</tr>
+
+					<tr>
+						<td>imrm→</td>
+						<td>import React, { memo } from 'react'</td>
+						<td>imrmp→</td>
+						<td>
+							import React, { memo } from 'react' & import PropTypes from
+							'prop-types'
+						</td>
+					</tr>
+
+					<tr>
+						<td>impt→</td>
+						<td>import PropTypes from 'prop-types'</td>
+						<td>redux→</td>
+						<td>import { connect } from 'react-redux'</td>
+					</tr>
+
+					<tr>
+						<td>rconst→</td>
+						<td>constructor(props) with this.state</td>
+						<td>rconc→</td>
+						<td>constructor(props, context) with this.state</td>
+					</tr>
+
+					<tr>
+						<td>est→</td>
+						<td>this.state = { }</td>
+						<td>cwm→</td>
+						<td>componentWillMount = () => { } DEPRECATED!!!</td>
+					</tr>
+
+					<tr>
+						<td>cdm→</td>
+						<td>componentDidMount = () => { }</td>
+						<td>cwr→</td>
+						<td>
+							componentWillReceiveProps = (nextProps) => { } DEPRECATED!!!
+						</td>
+					</tr>
+
+					<tr>
+						<td>scu→</td>
+						<td>shouldComponentUpdate = (nextProps, nextState) => { }</td>
+						<td>cwup→</td>
+						<td>
+							componentWillUpdate = (nextProps, nextState) => { } DEPRECATED!!!
+						</td>
+					</tr>
+
+					<tr>
+						<td>cdup→</td>
+						<td>componentDidUpdate = (prevProps, prevState) => { }</td>
+						<td>cwun→</td>
+						<td>componentWillUnmount = () => { }</td>
+					</tr>
+
+					<tr>
+						<td>gdsfp→</td>
+						<td>static getDerivedStateFromProps(nextProps, prevState) { }</td>
+						<td>gsbu→</td>
+						<td>getSnapshotBeforeUpdate = (prevProps, prevState) => { }</td>
+					</tr>
+
+					<tr>
+						<td>ren→</td>
+						<td>const { } = this.propsrender() { return( ) }</td>
+						<td>sst→</td>
+						<td>this.setState({ })</td>
+					</tr>
+					<tr>
+						<td>ssf→</td>
+						<td>this.setState((state, props) => return { })</td>
+						<td>props→</td>
+						<td>this.props.propName</td>
+					</tr>
+					<tr>
+						<td>state→</td>
+						<td>this.state.stateName</td>
+						<td>rcontext→</td>
+						<td>const ${1:contextName} = React.createContext()</td>
+					</tr>
+					<tr>
+						<td>cref→</td>
+						<td>this.${1:refName}Ref = React.createRef()</td>
+						<td>fref→</td>
+						<td>const ref = React.createRef()</td>
+					</tr>
+					<tr>
+						<td>bnd→</td>
+						<td>this.methodName = this.methodName.bind(this)</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!--==== React Native ====-->
+		<section class="table-container">
+			<h3>React Native</h3>
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>imrn→</td>
+						<td>import { $1 } from 'react-native'</td>
+					</tr>
+
+					<tr>
+						<td>rnstyle→</td>
+						<td>const styles = StyleSheet.create({})</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!--==== Redux ====-->
+		<section class="table-container">
+			<h3>Redux</h3>
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>rxaction→</td>
+						<td>redux action template</td>
+					</tr>
+
+					<tr>
+						<td>rxconst→</td>
+						<td>export const $1 = '$1'</td>
+					</tr>
+					<tr>
+						<td>rxreducer→</td>
+						<td>redux reducer template</td>
+					</tr>
+					<tr>
+						<td>rxselect→</td>
+						<td>redux selector template</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!--==== PropTypes ====-->
+		<section class="table-container">
+			<h3>PropTypes</h3>
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>pta→</td>
+						<td>PropTypes.array</td>
+						<td>ptar→</td>
+						<td>PropTypes.array.isRequired</td>
+					</tr>
+
+					<tr>
+						<td>ptb→</td>
+						<td>PropTypes.bool</td>
+						<td>ptbr→</td>
+						<td>PropTypes.bool.isRequired</td>
+					</tr>
+
+					<tr>
+						<td>ptf→</td>
+						<td>PropTypes.func</td>
+						<td>ptfr→</td>
+						<td>PropTypes.func.isRequired</td>
+					</tr>
+
+					<tr>
+						<td>ptn→</td>
+						<td>PropTypes.number</td>
+						<td>ptnr→</td>
+						<td>PropTypes.number.isRequired</td>
+					</tr>
+
+					<tr>
+						<td>pto→</td>
+						<td>PropTypes.object</td>
+						<td>ptor→</td>
+						<td>PropTypes.object.isRequired</td>
+					</tr>
+
+					<tr>
+						<td>pts→</td>
+						<td>PropTypes.string</td>
+						<td>ptsr→</td>
+						<td>PropTypes.string.isRequired</td>
+					</tr>
+
+					<tr>
+						<td>ptnd→</td>
+						<td>PropTypes.node</td>
+						<td>ptndr→</td>
+						<td>PropTypes.node.isRequired</td>
+					</tr>
+
+					<tr>
+						<td>ptel→</td>
+						<td>PropTypes.element</td>
+						<td>ptelr→</td>
+						<td>PropTypes.element.isRequired</td>
+					</tr>
+
+					<tr>
+						<td>pti→</td>
+						<td>PropTypes.instanceOf(name)</td>
+						<td>ptir→</td>
+						<td>PropTypes.instanceOf(name).isRequired</td>
+					</tr>
+
+					<tr>
+						<td>pte→</td>
+						<td>PropTypes.oneOf([name])</td>
+						<td>pter→</td>
+						<td>PropTypes.oneOf([name]).isRequired</td>
+					</tr>
+
+					<tr>
+						<td>ptet→</td>
+						<td>PropTypes.oneOfType([name])</td>
+						<td>ptetr→</td>
+						<td>PropTypes.oneOfType([name]).isRequired</td>
+					</tr>
+
+					<tr>
+						<td>ptao→</td>
+						<td>PropTypes.arrayOf(name)</td>
+						<td>ptaor→</td>
+						<td>PropTypes.arrayOf(name).isRequired</td>
+					</tr>
+
+					<tr>
+						<td>ptoo→</td>
+						<td>PropTypes.objectOf(name)</td>
+						<td>ptoor→</td>
+						<td>PropTypes.objectOf(name).isRequired</td>
+					</tr>
+					<tr>
+						<td>ptsh→</td>
+						<td>PropTypes.shape({ })</td>
+						<td>ptshr→</td>
+						<td>PropTypes.shape({ }).isRequired</td>
+					</tr>
+					<tr>
+						<td>ptany→</td>
+						<td>PropTypes.any</td>
+						<td>ptypes→</td>
+						<td>static propTypes = {}</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!--==== GraphQL ====-->
+		<section class="table-container">
+			<h3>GraphQL</h3>
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>graphql→</td>
+						<td>import { compose, graphql } from 'react-apollo'</td>
+					</tr>
+
+					<tr>
+						<td>expgql→</td>
+						<td>export default compose(graphql($1, { name: $2 }))($3)</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!--==== Console ====-->
+		<section class="table-container">
+			<h3>Console</h3>
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Prefix</th>
+						<th scope="col">Method</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>clg→</td>
+						<td>console.log(object)</td>
+					</tr>
+
+					<tr>
+						<td>cas→</td>
+						<td>console.assert(expression,object)</td>
+					</tr>
+
+					<tr>
+						<td>ccl→</td>
+						<td>console.clear()</td>
+					</tr>
+
+					<tr>
+						<td>cco→</td>
+						<td>console.count(label)</td>
+					</tr>
+
+					<tr>
+						<td>cdi→</td>
+						<td>console.dir</td>
+					</tr>
+
+					<tr>
+						<td>cer→</td>
+						<td>console.error(object)</td>
+					</tr>
+
+					<tr>
+						<td>cgr→</td>
+						<td>console.group(label)</td>
+					</tr>
+
+					<tr>
+						<td>cge→</td>
+						<td>console.groupEnd()</td>
+					</tr>
+
+					<tr>
+						<td>ctr→</td>
+						<td>console.trace(object)</td>
+					</tr>
+
+					<tr>
+						<td>cwa→</td>
+						<td>console.warn</td>
+					</tr>
+
+					<tr>
+						<td>cin→</td>
+						<td>console.info</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<!--==== React Components ====-->
+		<section class="table-container">
+			<h3>React Components</h3>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rcc→</button>
+				<pre>
+    			    <code class="language-html">
+        				import React, { Component } from &apos;react&apos;
+    
+                        export default class FileName extends Component {
+                            render() {
+                                return &lt;div&gt;$2&lt;/div&gt;
+                            }
+                        }
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rce→</button>
+				<pre>
+    			    <code class="language-html">
+        				import React, { Component } from &apos;react&apos;
+
+                        export class FileName extends Component {
+                            render() {
+                                return &lt;div&gt;$2&lt;/div&gt;
+                            }
+                        }
+
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rcep→</button>
+				<pre>
+    			    <code class="language-html">
+        				import React, { Component } from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+
+                        export class FileName extends Component {
+                        static propTypes = {}
+                            render() {
+                                return &lt;div&gt;$2&lt;/div&gt;
+                            }
+                        }
+
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rpc→</button>
+				<pre>
+    			    <code class="language-html">
+        				import React, { PureComponent } from &apos;react&apos;
+
+                        export default class FileName extends PureComponent {
+                            render() {
+                                return &lt;div&gt;$2&lt;/div&gt;
+                            }
+                        }
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rpcp→</button>
+				<pre>
+    			    <code class="language-html">
+        				import React, { PureComponent } from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+
+                        export default class FileName extends PureComponent {
+                        static propTypes = {}
+                            render() {
+                                return &lt;div&gt;$2&lt;/div&gt;
+                            }
+                        }
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rpce→</button>
+				<pre>
+    			    <code class="language-html">
+        				import React, { PureComponent } from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+
+                        export class FileName extends PureComponent {
+                        static propTypes = {}
+                            render() {
+                                return &lt;div&gt;$2&lt;/div&gt;
+                            }
+                        }
+
+                        export default FileName
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rccp→</button>
+				<pre>
+    			    <code class="language-html">
+        				import React, { Component } from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+
+                        export default class FileName extends Component {
+                            static propTypes = {
+                                $2: $3,
+                            }
+
+                            render() {
+                                return &lt;div&gt;$4&lt;/div&gt;
+                            }
+                        }
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rfcp→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+
+                        function $1(props) {
+                            return &lt;div&gt;$0&lt;/div&gt;
+                        }
+
+                        $1.propTypes = {}
+
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rfc→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+
+                        export default function $1() {
+                          return &lt;div&gt;$0&lt;/div&gt;
+                        }
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rfce→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+
+                        function $1() {
+                          return &lt;div&gt;$0&lt;/div&gt;
+                        }
+                        
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rafcp→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+                        
+                        const $1 = props =&gt; {
+                          return &lt;div&gt;$0&lt;/div&gt;
+                        }
+                        
+                        $1.propTypes = {}
+                        
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rafc→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+
+                        const $1 = () =&gt; {
+                        return &lt;div&gt;$0&lt;/div&gt;
+                        }
+
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rafce→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+
+                        const $1 = () =&gt; {
+                          return &lt;div&gt;$0&lt;/div&gt;
+                        }
+                        
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rmc→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React, { memo } from &apos;react&apos;
+
+                        export default memo(function $1() {
+                          return &lt;div&gt;$0&lt;/div&gt;
+                        })
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rmcp→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React, { memo } from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+                        
+                        const $1 = memo(function $1(props) {
+                          return &lt;div&gt;$0&lt;/div&gt;
+                        })
+                        
+                        $1.propTypes = {}
+                        
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rcredux→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React, { Component } from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+                        import { connect } from &apos;react-redux&apos;
+                        
+                        export class FileName extends Component {
+                          static propTypes = {
+                            $2: $3,
+                          }
+                        
+                          render() {
+                            return &lt;div&gt;$4&lt;/div&gt;
+                          }
+                        }
+                        
+                        const mapStateToProps = state =&gt; ({})
+                        
+                        const mapDispatchToProps = {}
+                        
+                        export default connect(
+                          mapStateToProps,
+                          mapDispatchToProps,
+                        )(FileName)
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">reduxmap→</button>
+				<pre>
+    			    <code class="language-html">
+                        const mapStateToProps = state =&gt; ({})
+                        const mapDispatchToProps = {}
+        			</code>
+    			</pre>
+			</section>
+
+			<h3>React Native Components</h3>
+			<section class="component">
+				<button type="button" class="btn btn-danger">rnc→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React, { Component } from &apos;react&apos;
+                        import { Text, View } from &apos;react-native&apos;
+                        
+                        export default class FileName extends Component {
+                          render() {
+                            return (
+                              &lt;View&gt;
+                                &lt;Text&gt; $2 &lt;/Text&gt;
+                              &lt;/View&gt;
+                            )
+                          }
+                        }
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rncs→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React, { Component } from &apos;react&apos;
+                        import { Text, StyleSheet, View } from &apos;react-native&apos;
+                        
+                        export default class FileName extends Component {
+                          render() {
+                            return (
+                              &lt;View&gt;
+                                &lt;Text&gt; $2 &lt;/Text&gt;
+                              &lt;/View&gt;
+                            )
+                          }
+                        }
+                        
+                        const styles = StyleSheet.create({})
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rnce→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React, { Component } from &apos;react&apos;
+                        import { Text, View } from &apos;react-native&apos;
+                        
+                        export class FileName extends Component {
+                          render() {
+                            return (
+                              &lt;View&gt;
+                                &lt;Text&gt; $2 &lt;/Text&gt;
+                              &lt;/View&gt;
+                            )
+                          }
+                        }
+                        
+                        export default $1
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">rncredux→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React, { Component } from &apos;react&apos;
+                        import { View, Text } from &apos;react-native&apos;
+                        import PropTypes from &apos;prop-types&apos;
+                        import { connect } from &apos;react-redux&apos;
+                        
+                        export class FileName extends Component {
+                          static propTypes = {
+                            $2: $3,
+                          }
+                        
+                          render() {
+                            return (
+                              &lt;View&gt;
+                                &lt;Text&gt; $2 &lt;/Text&gt;
+                              &lt;/View&gt;
+                            )
+                          }
+                        }
+                        
+                        const mapStateToProps = state =&gt; ({})
+                        
+                        const mapDispatchToProps = {}
+                        
+                        export default connect(
+                          mapStateToProps,
+                          mapDispatchToProps,
+                        )(FileName)
+        			</code>
+    			</pre>
+			</section>
+
+			<h3>Others</h3>
+			<section class="component">
+				<button type="button" class="btn btn-danger">cmmb→</button>
+				<pre>
+    			    <code class="language-html">
+                        /**
+                        |--------------------------------------------------
+                        | $1
+                        |--------------------------------------------------
+                        */                        
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">desc→</button>
+				<pre>
+    			    <code class="language-html">
+                        describe(&apos;$1&apos;, () =&gt; {
+                            $2
+                        })
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">test→</button>
+				<pre>
+    			    <code class="language-html">
+                        test(&apos;should $1&apos;, () =&gt; {
+                            $2
+                        })
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">tit→</button>
+				<pre>
+    			    <code class="language-html">
+                        it(&apos;should $1&apos;, () =&gt; {
+                            $2
+                        })
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">stest→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+                        import renderer from &apos;react-test-renderer&apos;
+                        
+                        import { ${1:ComponentName} } from &apos;../${1:ComponentName}&apos;
+                        
+                        describe(&apos;&lt;${1:ComponentName} /&gt;&apos;, () =&gt; {
+                          const defaultProps = {}
+                          const wrapper = renderer.create(&lt;${1:ComponentName} {...defaultProps} /&gt;)
+                        
+                          test(&apos;render&apos;, () =&gt; {
+                            expect(wrapper).toMatchSnapshot()
+                          })
+                        })
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">srtest→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+                        import renderer from &apos;react-test-renderer&apos;
+                        import { Provider } from &apos;react-redux&apos;
+                        
+                        import store from &apos;src/store&apos;
+                        import { ${1:ComponentName} } from &apos;../${1:ComponentName}&apos;
+                        
+                        describe(&apos;&lt;${1:ComponentName} /&gt;&apos;, () =&gt; {
+                          const defaultProps = {}
+                          const wrapper = renderer.create(
+                            &lt;Provider store={store}&gt;
+                              &lt;${1:${TM_FILENAME_BASE}} {...defaultProps} /&gt;)
+                            &lt;/Provider&gt;,
+                          )
+                        
+                          test(&apos;render&apos;, () =&gt; {
+                            expect(wrapper).toMatchSnapshot()
+                          })
+                        })
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">sntest→</button>
+				<pre>
+    			    <code class="language-html">
+                        import &apos;react-native&apos;
+                        import React from &apos;react&apos;
+                        import renderer from &apos;react-test-renderer&apos;
+                        
+                        import ${1:ComponentName} from &apos;../${1:ComponentName}&apos;
+                        
+                        describe(&apos;&lt;${1:ComponentName} /&gt;&apos;, () =&gt; {
+                          const defaultProps = {
+                        
+                          }
+                        
+                          const wrapper = renderer.create(&lt;${1:ComponentName} {...defaultProps} /&gt;)
+                        
+                          test(&apos;render&apos;, () =&gt; {
+                            expect(wrapper).toMatchSnapshot()
+                          })
+                        })
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">snrtest→</button>
+				<pre>
+    			    <code class="language-html">
+                        import &apos;react-native&apos;
+                        import React from &apos;react&apos;
+                        import renderer from &apos;react-test-renderer&apos;
+                        import { Provider } from &apos;react-redux&apos;
+                        
+                        import store from &apos;src/store/configureStore&apos;
+                        import ${1:ComponentName} from &apos;../${1:ComponentName}&apos;
+                        
+                        describe(&apos;&lt;${1:ComponentName} /&gt;&apos;, () =&gt; {
+                          const defaultProps = {}
+                          const wrapper = renderer.create(
+                            &lt;Provider store={store}&gt;
+                              &lt;${1:ComponentName} {...defaultProps} /&gt;
+                            &lt;/Provider&gt;,
+                          )
+                        
+                          test(&apos;render&apos;, () =&gt; {
+                            expect(wrapper).toMatchSnapshot()
+                          })
+                        })
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">hocredux→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+                        import { connect } from &apos;react-redux&apos;
+                        
+                        export const mapStateToProps = state =&gt; ({
+                        
+                        })
+                        
+                        export const mapDispatchToProps = {
+                        
+                        }
+                        
+                        export const ${1:hocComponentName} = (WrappedComponent) =&gt; {
+                          const hocComponent = ({ ...props }) =&gt; &lt;WrappedComponent {...props} /&gt;
+                        
+                          hocComponent.propTypes = {
+                          }
+                        
+                          return hocComponent
+                        }
+                        
+                        export default WrapperComponent =&gt; connect(mapStateToProps, mapDispatchToProps)(${1:hocComponentName}(WrapperComponent))
+        			</code>
+    			</pre>
+			</section>
+
+			<section class="component">
+				<button type="button" class="btn btn-danger">hoc→</button>
+				<pre>
+    			    <code class="language-html">
+                        import React from &apos;react&apos;
+                        import PropTypes from &apos;prop-types&apos;
+                        
+                        export default WrappedComponent =&gt; {
+                          const hocComponent = ({ ...props }) =&gt; &lt;WrappedComponent {...props} /&gt;
+                        
+                          hocComponent.propTypes = {}
+                        
+                          return hocComponent
+                        }
+        			</code>
+    			</pre>
+			</section>
+		</section>
+
+		<!-- Highlight Code -->
+		<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+	</body>
+</html>

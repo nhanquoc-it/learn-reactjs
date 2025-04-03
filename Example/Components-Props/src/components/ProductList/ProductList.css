@@ -1,0 +1,12 @@
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+/* Optional: Adjust as needed */
+@media screen and (max-width: 768px) {
+	.product-list {
+		flex-direction: column;
+	}
+}
